@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0, sign = 1;
+    
+    printf("Enter the range: ");
+    scanf("%d", &n);
+    
+    printf("Series 1 - 2 + 3 - 4 + 5 ... up to %d:\n", n);
+    
+    for (int i = 1; i <= n; i++) {
+        int term = i * sign;
+        printf("%d ", term);
+        sum += term;
+        sign = -sign;
+    }
+    
+    printf("\nThe sum of the series up to %d is: %d", n, sum);
+    
+    return 0;
+}
