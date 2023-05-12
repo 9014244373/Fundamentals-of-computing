@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int n, sum = 0;
+    
+    printf("Enter the range: ");
+    scanf("%d", &n);
+    
+    printf("Sum of squares of even numbers up to %d:\n", n);
+    
+    for (int i = 2; i <= n; i += 2) {
+        int square = i * i;
+        printf("%d^2 = %d\n", i, square);
+        sum += square;
+    }
+    
+    printf("The sum of squares of even numbers up to %d is: %d", n, sum);
+    
+    return 0;
+}
