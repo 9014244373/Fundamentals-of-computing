@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int sum = 0;
+    
+    printf("Enter the range: ");
+    scanf("%d", &n);
+    
+    printf("Sum of the cubes of natural numbers up to %d:\n", n);
+    
+    for (int i = 1; i <= n; i++) {
+        int cube = i * i * i;
+        printf("%d^3 = %d\n", i, cube);
+        sum += cube;
+    }
+    
+    printf("The sum of the cubes of natural numbers up to %d is: %d", n, sum);
+    
+    return 0;
+}
