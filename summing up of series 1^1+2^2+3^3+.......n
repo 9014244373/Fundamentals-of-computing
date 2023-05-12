@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int n;
+    double sum = 0;
+    
+    printf("Enter the range: ");
+    scanf("%d", &n);
+    
+    printf("Sum of series 1^1 + 2^2 + 3^3 + ... + %d^%d:\n", n, n);
+    
+    for (int i = 1; i <= n; i++) {
+        double term = pow(i, i);
+        printf("%d^%d = %.0f\n", i, i, term);
+        sum += term;
+    }
+    
+    printf("The sum of the series up to %d is: %.0f", n, sum);
+    
+    return 0;
+}
